@@ -1,0 +1,50 @@
+***Installing Sexy Nerd Bot***
+Requirements:
+- Perl (SNB is tested and hosted off my box with perl 5.8.x, earlier versions may or may not work as well)
+- Various perl modules, all available from CPAN:
+  -Config::IniFiles
+  -POE (poe.perl.org)
+  -Roman
+  -DBI, and the DBD:Pg postgresql driver
+- A working postgresql installation
+
+***Setting up the bot
+Assuming you have that, the first step is to set up the necessary
+tables in the postgres database. create.sql should contain the
+necessary statements, so
+
+$psql -f create.sql
+
+Should suffice to create the tables and load the default
+permissions. SNB stores all of its data within the `MIT' schema; if
+this bot comes into significant use outside of MIT, I'll change that.
+
+Once that's done, rename data/config-example.ini to data/config.ini,
+and modify it as appropriate, using your screen name and password, and
+setting database options appropriately. Most of the options should be
+self-explanatory. Bot.Log is an informative if terse log file, and
+Bot.stdout and Bot.stderr are where standard output and error are
+redirected if the bot is running as a daemon (which is the default).
+
+***Running the bot
+Simply execute perl MITBot.pl or ./MITBot.pl (assuming your perl is
+/usr/bin/perl) from the bot's root directory, and, assuming
+everything is set up, it should launch and log onto the given account
+and connect to the chat room specified in the config file. If
+something goes wrong, errors should be written to the log file
+(default mit.log) specified in the config. For TOC error codes, refer
+to the document TOC.txt in this directory.
+
+If you want to run the bot without it detaching from a terminal and
+daemonizing, and without redirecting stdout or stderr, run it with a
+--nodaemon or -n command-line option. Otherwise, any command-line
+option is taken to be the path to an alternate configuration file
+(other than data/config.ini)
+
+When running, the bot writes its PID to MITBot.pid, for convenience in
+killing and signalling it. If it receives a SIGHUP, it will reload
+BotCommands.pl, as well as most of the contents of the data/
+directory. (Except for the main configuration file)
+
+Feel free to contact me for help, on AIM as hanjithearcher, or via
+email at snb@mit.edu

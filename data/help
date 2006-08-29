@@ -1,0 +1,28 @@
+[IM]
+help -- Display this help
+info -- Interactively enter your information
+gender -- Are you a guy or a girl?
+name -- Change your stored name
+location -- Change your stored location
+interests -- Change your stored interests
+autoinvite -- Toggle whether I should invite you to the chat when you come online.
+chat -- Set your preferred chat room (Used as a default argument to !invite)
+dorm -- Tell me what dorm you're in at MIT.
+!cheer -- Display the MIT cheer. (Disabled in chats)
+[Chat]
+The following commands work either in the chat, or over IM.
+!8ball <question> -- Answer a yes-or-no question.
+!countdown -- Counting down 'til orientation...
+!course <num> -- Looks up an MIT major by course number.
+!credits -- Who's responsible for this madness?
+!find <name> -- Look up a user by name.
+!fortune --  Print a random amusing witticism.
+!invite <user> <chat> -- Invite a user to join a chat.
+!join <room> -- Tell the bot to join a new chat.
+!spinthebottle -- Spin the bottle for a kiss!
+!source -- Show how you can obtain my source code.
+!topic -- Set or view a chat room's topic.
+!uptime -- Display how long I've been online.
+!whatis <name> -- Finds a course number by name.
+!whoami -- Display what I know about you.
+!whois <name> -- Look up a screen name in my database.
