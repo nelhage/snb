@@ -16,9 +16,8 @@ sub source
 {
     my ($self, $who, $chat, @args) = @_;
     return <<'SOURCE';
-Perl source to the bot is available at
-http://web.mit.edu/nelhage/Public/snb.tgz
-Bug Nelson (AIM: hanjithearcher, snb@mit.edu) if it's out of date.
+Perl source to the bot is available via anonymous svn from
+svn://nelhage.mit.edu/snb/
 SOURCE
 }
 

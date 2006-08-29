@@ -53,7 +53,7 @@ sub uptime {
 
 
 registerCommand("cheer"     =>  \&cheer);
-registerCommand("photos"    =>  \&photos);
+#registerCommand("photos"    =>  \&photos);
 registerCommand("countdown" =>  \&countdown);
 registerCommand("uptime"    => \&uptime);
 

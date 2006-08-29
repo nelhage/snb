@@ -72,8 +72,8 @@ sub greet {
     my $self = shift;
     return if $MIT::userDB->greeted($self->{NICK});
     $self->send("Hello, " . $self->displayName .
-                  ". I'm a bot set up to help maintain the " .
-                    "chatroom for future members of MIT class of 2009. \n" .
+                  ". I'm a bot set up to help maintain chatrooms " .
+                    "chatroom for incoming or prospective MIT prefrosh. \n" .
                       "I haven't seen you around before. " .
                         "Type 'help' to learn how to let me know ".
                           "who you are, or ignore me and I won't bother " .
