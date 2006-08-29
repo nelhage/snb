@@ -44,13 +44,14 @@ sub whatis
     return $msg;
 }
 
+%courses = ();
 open(COURSES,"<","data/courses");
 
 my ($line,$number,$name);
 
 while ($line = <COURSES>) {
     chomp $line;
-    ($number, $name) = ($1,$2) if $line =~ /^(.*)\t(.*)$/;
+    ($number, $name) = ($1,$2) if $line =~ /^([\dA-Z]+)\s+(.+)$/;
     $courses{$number} = $name;
 }
 close(COURSES);
